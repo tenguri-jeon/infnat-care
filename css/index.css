@@ -1,0 +1,131 @@
+:root{
+    /* color */
+    --main-yellow-color: #ffe898;
+    --main-pink-color: #ffcac2;
+    --main-blue-color:#c2dbff;
+    --main-khaki-color: #b8ab7f;
+    --main-red-color: #eb4d5c;
+    --main-gray-color: #4e4e4e;
+    --main-white-color: #fff;
+
+    /* container-size */
+    --container-size : 1200px
+}
+
+.hide-text {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(0px 0px 99.9% 99.9%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+}
+
+/* .unit-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+} */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 64px;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.header-size{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-wrapper{
+    padding: 15px;
+    padding-bottom: 0px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    position: relative;
+    z-index: 200;
+    height: 30px;
+}
+
+h1{
+    width: 130px ;
+    height: 43px;
+    position: absolute;
+    left: 30px;
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.menu-wrapper{
+    display: flex;
+    gap: 25px;
+}
+
+.menu > a{
+    color: var(--main-gray-color);
+    font-size: 18px;
+}
+
+.header-right{
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+.goto-store{
+    position: relative;
+    text-align: center;
+    padding-right: 6px;
+}
+
+.goto-store::after{
+    content: '';
+    display: block;
+    background-color: #b0b0b0;
+    width: 2px;
+    height: 17px;
+    position: absolute;
+    right: 0;
+    top: 18%;
+}
+
+.header-right a{
+    font-size: 14px;
+    color: var(--main-gray-color);
+    font-weight: bold;
+}
+
+.language{
+    display: flex;
+    gap: 6px;
+    padding-top: 8px;
+    height: 22px;
+    overflow: hidden;
+}
+
+.language svg{
+    width: 18px;
+    height: 18px;
+}
+
+.language-wrapper{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+#main{
+    background-image: url();
+    width: 100vw;
+    height: 560px;
+}
