@@ -129,3 +129,241 @@ h1{
     width: 100vw;
     height: 560px;
 }
+
+.main-text{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transform: translateY(-50%);
+}
+
+.main-container-size{
+    max-width: var(--container-size);
+    margin: 0 auto;
+    height: 100%;
+}
+
+#main .main-text{
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+#main .main-container-size{
+    position: relative;
+}
+
+.main-text span{
+    color: var(--main-gray-color);
+}
+
+.main-text h2{
+    color: var(--main-red-color);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.explane-main-text{
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.explane-main-text h3{
+    display: inline-block;
+    font-size: 42px;
+    color: var(--main-gray-color);
+    font-weight: bold;
+}
+
+.explane-main-text p {
+    color: var(--main-gray-color);
+    font-size: 24px;
+    margin-top: 16px;
+}
+
+.explane-infant-care-container{
+    display: flex;
+    gap: 100px;
+    margin-bottom: 128px;
+}
+
+.explnae-baby-img{
+    flex-basis: 50%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.explane-infant-care-container-text{
+    flex-basis: 50%;
+}
+
+.explane-mobile-img{
+    position: absolute;
+    width: 230px;
+    height: 460px;
+    left: 40%;
+    transform: translate(-50%, 5%);
+}
+
+.explane-infant-care-container{
+    position: relative;
+}
+
+.explane-infant-care-container-text{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+.heading-text{
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--main-red-color);
+}
+
+.sub-text{
+    color: var(--main-gray-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.explane-infant-care-text{
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.recommended-product{
+    width: 160px;
+    background-color: var(--main-red-color);
+    position: relative;
+}
+
+.recommended-product span{
+    color: var(--main-white-color);
+    padding: 10px;
+    display: inline-block;
+}
+
+.sleep-baby{
+    flex-direction: revert;
+}
+
+.sleep-baby .explane-mobile-img {
+    transform: translate(0,0);
+}
+
+.app-heading-text{
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.app-heading-text p{
+    font-size: 32px;
+    color: var(--main-red-color);
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.app-heading-text span{
+    font-size: 16px;
+    color: var(--main-gray-color);
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.show-app{
+    width: 824px;
+    margin: 0 auto;
+}
+
+.mobile-img-wrapper{
+    display: flex;
+    position: relative;
+}
+
+.app-wrapper{
+    display: flex;
+}
+
+.app-background-img{
+    position: relative;
+}
+
+.app-explane-text{
+    position: relative;
+}
+
+.app-mobile-view{
+    width: 360px;
+    position: absolute;
+}
+
+.app-background-img p{
+    color: var(--main-white-color);
+    font-size: 16px;
+}
+
+.app-text-wrapper:first-child{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.app-text-wrapper{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    text-align: end;
+}
+
+.app-text-wrapper p{
+    margin-top: 16px;
+    line-height: 150%;
+}
+
+.app-mobile-background{
+    display: flex;
+}
+
+.mobile-view-wrapper{
+    width: 360px;
+    height: 720px;
+    position: absolute;
+}
+
+.make-mobile-view{
+    width: 360px;
+    height: 720px;
+    border: 10px solid black;
+    border-radius: 54px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mobile-view-button{
+    width: 10px;
+    height: 60px;
+    background-color: black;
+    position: absolute;
+}
+
+.top-button{
+    right: 0;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.app-mobile-view-wrapper{
+    display: flex;
+
+}
+
+.app-mobile-view-wrapper figure{
+    width: 330px;
+    height: 702px;
+    border-radius: 54px;
+    overflow: hidden;
+}
+
+
