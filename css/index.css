@@ -7,6 +7,7 @@
     --main-red-color: #eb4d5c;
     --main-gray-color: #4e4e4e;
     --main-white-color: #fff;
+    --footer-background: #f4f8f8;
 
     /* container-size */
     --container-size : 1200px
@@ -56,7 +57,7 @@ header{
     height: 30px;
 }
 
-h1{
+.header-wrapper h1 {
     width: 130px ;
     height: 43px;
     position: absolute;
@@ -132,6 +133,7 @@ h1{
     width: 100vw;
     height: 560px;
     padding-bottom: 96px;
+    box-sizing: border-box;
 }
 
 .main-text{
@@ -159,17 +161,20 @@ h1{
 
 .main-text span{
     color: var(--main-gray-color);
+    line-height: 130%;
 }
 
 .main-text h2{
     color: var(--main-red-color);
     font-size: 40px;
     font-weight: bold;
+    line-height: 150%;
 }
 
 .explane-main-text{
     text-align: center;
     margin-bottom: 64px;
+    margin-top: 32px;
 }
 
 .explane-main-text h3{
@@ -188,6 +193,10 @@ h1{
 .explane-infant-care-container{
     display: flex;
     margin-bottom: 128px;
+}
+
+#explane-infant-care{
+    box-sizing: border-box;
 }
 
 .explnae-baby-img{
@@ -455,4 +464,361 @@ h1{
     height: 150px;
 }
 
+#shopping-guide{
+    background-color: var(--main-red-color);
+    margin-bottom: 94px;
+}
 
+#shopping-guide .main-container-size{
+    display: flex;
+}
+
+.shopping-guide-img-text-wrapper{
+    margin-top: 24px;
+}
+
+.shopping-guide-img-area{
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.shopping-guide-text-area{
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.shopping-guide-text-area-text{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shopping-guide-img-text-wrapper h3 {
+    color: var(--main-white-color);
+    font-size: 18px;
+    text-align: center;
+}
+
+.shopping-guide-img-text-wrapper p {
+    color: var(--main-white-color);
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.shopping-guide-back{
+    background-color: var(--main-white-color);
+    border-top-right-radius: 500px;
+    border-top-left-radius: 500px;
+    margin: 0 60px;
+}
+
+.shopping-guide-back figure{
+    margin: 0 60px;
+}
+
+.shopping-guide-img-area-img-wrapper{
+    margin-top: 24px;
+}
+
+.shopping-guide-text-area p{
+    color: var(--main-white-color);
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 130%;
+}
+
+.shopping-guide-text-area span{
+    color: var(--main-white-color);
+    line-height: 150%;
+}
+
+.shopping-guide-text-area-text .shopping-guide-img-area-img-wrapper{
+    display: none;
+}
+
+#shopping-tip{
+    padding-bottom: 96px;
+}
+
+.step1-container{
+    padding-bottom: 96px;
+}
+
+.step1-text-wrapper span{
+    color: var(--main-gray-color);
+    font-size: 18px;
+    display: block;
+    text-align: center;
+}
+
+.step1-text-wrapper h4{
+    color: var(--main-red-color);
+    font-weight: bold;
+    text-align: center;
+    font-size: 32px;
+    line-height: 130%;
+    margin-top: 16px;
+}
+
+.step1-text-wrapper p{
+    color: var(--main-gray-color);
+    font-size: 18px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.step1-containers{
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.step1-contanier p{
+    color: var(--main-gray-color);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 24px 0px;
+    line-height: 150%;
+}
+
+.step1-contanier{
+    box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.mouse{
+    position: absolute;
+    top: 40%;
+    right: 50%;
+}
+
+.step2-container{
+    margin-top: 96px;
+    display: flex;
+}
+
+.step2-main-img-container{
+    flex-basis: 35%;
+}
+
+.step2-text-container{
+    flex-basis: 80%;
+}
+
+.step2-main-slide-wrapper{
+    display: flex;
+}
+
+.step2-main-img-container{
+    width: 389px;
+    overflow: hidden;
+}
+
+.step2-slide figure{
+    width: 389px;
+}
+
+
+.step2-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.step2-sub-slide-wrapper{
+    display: flex;
+}
+
+.step2-text{
+    margin: 0 auto;
+}
+
+.step2-text span{
+    font-size: 18px;
+    color: var(--main-gray-color);
+    font-weight: bold;
+}
+
+.step2-text h4{
+    font-size: 32px;
+    color: var(--main-red-color);
+    font-weight: bold;
+    line-height: 130%;
+    margin-top: 16px;
+}
+
+.step2-text p{
+    font-size: 18px;
+    color: var(--main-gray-color);
+    font-weight: bold;
+    line-height: 150%;
+    margin-top: 16px;
+}
+
+.step3-category{
+    margin-top: 96px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-category span{
+    font-size: 18px;
+    color: var(--main-gray-color);
+    font-weight: bold;
+}
+
+.search-category h4{
+    font-size: 32px;
+    color: var(--main-red-color);
+    font-weight: bold;
+    line-height: 130%;
+}
+
+.search-category p{
+    font-size: 18px;
+    color: var(--main-gray-color);
+    font-weight: bold;
+    line-height: 150%;    
+    margin-top: 16px;
+}
+
+.search-here{
+    border-bottom: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding: 5px;
+    align-items: center;
+}
+
+.search-here p {
+    color: #a3a3a3;
+}
+
+.example-category{
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+}
+
+.categorys-wrapper{
+    display: flex;
+    justify-content: space-around;
+    gap: 24px;
+}
+
+.block2{
+    justify-content: center;
+}
+
+.category {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-yellow-color);
+    border-radius: 8px;
+}
+
+.category p {
+    padding: 15px 0px ;
+    width: 150px;
+    color: var(--main-khaki-color);
+    font-weight: bold;
+}
+
+.redblock{
+    background-color: var(--main-red-color);
+}
+
+.category > .redblock{
+    color: var(--main-white-color);
+}
+
+footer{
+    padding: 43px 0px;
+    background-color: var(--footer-background);
+}
+
+.footer-wrapper .main-container-size{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-text-warpper{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-text-warpper h1{
+    width: 130px ;
+    height: 43px;
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.footer-nav a {
+    color: var(--main-gray-color);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer-information {
+    display: flex;
+    color: var(--main-gray-color);
+    font-weight: bold;
+}
+
+.footer-text-warpper p {
+    color: var(--main-gray-color);
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.footer-wrapper .main-container-size ul{
+    display: flex;
+    gap: 16px;
+    align-items: end;
+}
+
+@media screen and (max-width: 1250px) {
+    .blue-square{
+        display: none;
+    }
+
+    .pink-square{
+        display: none;
+    }
+    
+    .yellow-square{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 834px) {
+    #main{
+        background-size: cover;
+        background-position: 38%;
+        height: 790px;
+        padding: 32px;
+    }
+
+    .main-text h2{
+        font-size: 30px;
+    }
+
+    .explane-infant-care-container{
+        flex-direction: column;
+    }
+
+    .sleep-baby{
+        flex-direction: column-reverse;
+    }
+}
