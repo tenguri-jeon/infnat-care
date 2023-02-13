@@ -22,14 +22,14 @@
     width: 1px;
 }
 
-/* .unit-link{
+.unit-link{
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 100;
-} */
+}
 
 header{
     position: fixed;
@@ -175,6 +175,10 @@ header{
     text-align: center;
     margin-bottom: 64px;
     margin-top: 32px;
+}
+
+.mobile-br{
+    display: none;
 }
 
 .explane-main-text h3{
@@ -330,8 +334,11 @@ header{
     display: flex;
 }
 
-.app-background-img{
+.app-mobile-background li{
     position: relative;
+}
+
+.app-background-img{
     width: 824px;
 }
 
@@ -344,14 +351,15 @@ header{
     position: absolute;
 }
 
-.app-background-img p{
+.app-text-wrapper p{
     color: var(--main-white-color);
     font-size: 16px;
 }
 
-.app-text-wrapper:first-child{
+.app-text-wrapper span{
     font-size: 24px;
     font-weight: bold;
+    color: var(--main-white-color);
 }
 
 .app-text-wrapper{
@@ -424,9 +432,8 @@ header{
 }
 
 .app-mobile-view-wrapper figure{
-    width: 513px;
-    height: 702px;
-    border-radius: 54px;
+    width: 345px;
+    height: 722px;
     overflow: hidden;
 }
 
@@ -554,6 +561,7 @@ header{
     font-size: 18px;
     display: block;
     text-align: center;
+    font-weight: bold;
 }
 
 .step1-text-wrapper h4{
@@ -788,6 +796,27 @@ footer{
     align-items: end;
 }
 
+.youtube{
+    position: relative;
+}
+
+.facebook{
+    position: relative;
+}
+
+.insta{
+    position: relative;
+}
+
+.twitter{
+    position: relative;
+}
+
+.sns-wrapper li{
+    width: 25px;
+    height: 25px;
+}
+
 @media screen and (max-width: 1250px) {
     .blue-square{
         display: none;
@@ -803,6 +832,15 @@ footer{
 }
 
 @media screen and (max-width: 834px) {
+
+    .header-right{
+        display: none;
+    }
+    
+    .header-wrapper{
+        justify-content: end;
+    }
+
     #main{
         background-size: cover;
         background-position: 38%;
@@ -814,11 +852,280 @@ footer{
         font-size: 30px;
     }
 
+    #explane-infant-care {
+    padding: 0px 32px;
+    }
+
     .explane-infant-care-container{
         flex-direction: column;
+        gap: 24px;
     }
 
     .sleep-baby{
         flex-direction: column-reverse;
     }
+
+    .explane-mobile-img{
+        right: 0;
+        transform: none;
+        left: unset;
+        top: 20%;
+    }
+
+    .sleep-baby .explane-mobile-img{
+        transform: none;
+    }
+
+    .explane-infant-care-container-text{
+        padding-left: 0;
+    }
+
+    .sleep-baby .explane-infant-care-container-text{
+        padding-right: 0;
+        text-align: start;
+    }
+
+    .mobile-view-wrapper{
+        left: 0;
+    }
+
+    .next-allow-area{
+        background-color: #dadada;
+        border-radius: 50%;
+        top: unset;
+        width: 50px;
+        height: 50px;
+        right: 10%;
+        bottom: 25%;
+    }
+
+    .before-allow-area{
+        background-color: #dadada;
+        border-radius: 50%;
+        top: unset;
+        width: 50px;
+        height: 50px;
+        left: unset;
+        right: 35%;
+        bottom: 25%;
+    }
+
+    .next-allow{
+        border-top: 5px solid var(--main-white-color);
+        border-right: 5px solid var(--main-white-color);
+        width: 25px;
+        height: 25px;
+        transform: translate(-25% , 15%) rotate(45deg);
+    }
+
+    .before-allow{
+        border-top: 5px solid var(--main-white-color);
+        border-left: 5px solid var(--main-white-color);
+        width: 25px;
+        height: 25px;
+        transform: translate(75% , 15%) rotate(-45deg);
+        bottom: 25%;
+        right: 25%;
+        left: unset;
+    }
+
+    #shopping-guide .main-container-size{
+        flex-direction: column;
+    }
+
+    .shopping-guide-img-area .shopping-guide-back{
+        display: none;
+    }
+
+    .shopping-guide-text-area-text .shopping-guide-img-area-img-wrapper{
+        display: block;
+    }
+    
+    #shopping-guide{
+        padding: 0px 32px;
+    }
+
+    .shopping-guide-text-area p{
+        font-size: 24px;
+        margin-top: 16px;
+        margin: 16px auto;
+    }
+
+    .nobile-none{
+        display: none;
+    }
+
+    .shopping-guide-img-text-wrapper p{
+        margin-top: 16px;
+    }
+
+    .shopping-guide-img-area-img-wrapper{
+        margin-top: 0px;
+    }
+
+    .shopping-guide-text-area span{
+        margin: 16px auto;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #shopping-tip{
+        padding: 32px;
+    }
+
+    .step1-contanier figure{
+        flex-basis: 50%;
+    }
+
+    .step1-containers{
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .step1-contanier{
+        display: flex;
+        align-items: center;
+    }
+
+    .mouse {
+        top: 55%;
+        right: 70%;
+    }
+
+    .step2-sub-slide-wrapper{
+        display: none;
+    }
+
+    .step2-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .step2-text-container{
+        text-align: center;
+    }
+
+    .step2-main-img-container{
+        margin: 0 auto;
+    }
+
+    .step3-category{
+        flex-direction: column;
+    }
+
+    .search-category{
+        text-align: center;
+    }
+
+    .example-category{
+        margin-top: 24px;
+        gap: 16px;
+    }
+
+    footer{
+        margin: 43px 36px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    
+    .menu-wrapper{
+        display: none;
+    }
+
+    .main-text{
+        text-align: center;
+    }
+
+    .mobile-br{
+        display: block;
+    }
+
+    .explane-main-text p {
+        line-height: 150%;
+    }
+
+    .explane-main-text {
+        margin-top: 72px;
+    }
+
+    #explane-infant-care{
+        padding: 0px 16px;
+    }
+
+    .explane-mobile-img{
+        position: unset;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .explane-mobile-img{
+        margin: 0 auto;
+    }
+
+    .app-heading-text p{
+        font-size: 24px;
+    }
+
+    .recommended-product {
+        margin: 0 auto;
+    }
+
+    .show-app {
+    width: 330px;
+    height: 360px;
+    }
+
+    .make-mobile-view{
+        width: 150px;
+        height: 320px;
+        border-radius: 35px;
+        border: 5px solid black;
+    }
+
+    .mobile-view-wrapper{
+        width: 160px;
+        height: 330px;
+    }
+
+    .mobile-view-button{
+        width: 5px;
+        height: 30px;
+    }
+
+    .app-background-img{
+        width: 328px;
+    }
+
+    .app-text-wrapper{
+        position: unset;
+        margin-top: 64px;
+    }
+
+    .app-text-wrapper p{
+        color: var(--main-gray-color);
+    }
+    .app-text-wrapper span{
+        color: var(--main-gray-color);
+    }
+
+    .shopping-guide-img-text-wrapper h3{
+        font-size: 14px;
+    }
+
+    .shopping-guide-img-text-wrapper p{
+        font-size: 20px;
+    }
+
+    .shopping-guide-text-area p{
+        font-size: 16px;
+    }
+
+    .shopping-guide-text-area span{
+        font-size: 14px;
+    }
+
 }
