@@ -132,7 +132,11 @@ header{
     flex-direction: column;
 }
 
-.mobile-hmaburger{
+.mobile-hamburger{
+    display: none;
+}
+
+.mobile-hamburger-menu{
     display: none;
 }
 
@@ -611,6 +615,7 @@ header{
 .step1-containers{
     margin-top: 32px;
     display: flex;
+    gap: 16px;
     justify-content: space-between;
 }
 
@@ -862,7 +867,7 @@ footer{
 @media screen and (max-width: 1250px) {
 
     #main{
-        padding: 0px 32p;
+        padding: 0px 32px;
     }
 
     #explane-infant-care{
@@ -1147,7 +1152,42 @@ footer{
         display: none;
     }
 
-    .mobile-hmaburger{
+    .click-close{
+        left: 0;
+    }
+
+    .mobile-logo{
+        width: 90px;
+        height: 40px;
+    }
+
+    .mobile-menu{
+        padding-top: 25%;
+    }
+
+    .mobile-menu li>a{
+        color: var(--main-gray-color);
+    }
+
+    .mobile-menu li{
+        margin-bottom: 35px;
+    }
+
+    .mobile-hamburger-menu{
+        display: block;
+        z-index: 200;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--main-white-color);
+        padding: 20px;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+
+    .mobile-hamburger{
         width: 48px;
         height: 48px;
         display: flex;
@@ -1163,7 +1203,7 @@ footer{
         position: relative;
     }
 
-    .mobile-hmaburger span{
+    .mobile-hamburger span{
         display: block;
         width: 100%;
         height: 2px;
@@ -1184,22 +1224,35 @@ footer{
         transform: translateY(-50%);
     }
     
-    .mobile-hmaburger.active-hamberger .mobile-menu-top{
+    .mobile-hamburger.active-hamberger .mobile-menu-top{
         top: 50%;
         transform: translateY(-50%) rotate(-45deg);
         background-color: var(--main-brown-color);
     }
     
-    .mobile-hmaburger.active-hamberger .middle{
+    .mobile-hamburger.active-hamberger .middle{
         opacity: 0;
     }
     
-    .mobile-hmaburger.active-hamberger .mobile-menu-bottom{ 
+    .mobile-hamburger.active-hamberger .mobile-menu-bottom{ 
         background-color: var(--main-brown-color);
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
     }
 
+    .mobile-hmaburger-menu{
+        z-index: 200;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--main-white-color);
+        padding: 20px;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
 
 
 
