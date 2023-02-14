@@ -112,6 +112,7 @@ header{
     padding-top: 8px;
     height: 22px;
     overflow: hidden;
+    padding-left: 8px;
 }
 
 .language svg{
@@ -125,12 +126,16 @@ header{
     flex-direction: column;
 }
 
+.mobile-hmaburger{
+    display: none;
+}
+
 #main{
     background-image: url(../img/main-img.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100vw;
+    width: 100%;
     height: 560px;
     padding-bottom: 96px;
     box-sizing: border-box;
@@ -517,15 +522,8 @@ header{
     text-align: center;
 }
 
-.shopping-guide-back{
-    background-color: var(--main-white-color);
-    border-top-right-radius: 500px;
-    border-top-left-radius: 500px;
-    margin: 0 60px;
-}
-
-.shopping-guide-back figure{
-    margin: 0 60px;
+.first-family{
+    margin: 0 120px;
 }
 
 .shopping-guide-img-area-img-wrapper{
@@ -544,7 +542,7 @@ header{
     line-height: 150%;
 }
 
-.shopping-guide-text-area-text .shopping-guide-img-area-img-wrapper{
+.mobile-family{
     display: none;
 }
 
@@ -578,6 +576,7 @@ header{
     font-size: 18px;
     text-align: center;
     margin-top: 16px;
+    font-weight: bold
 }
 
 .step1-containers{
@@ -686,6 +685,7 @@ header{
     color: var(--main-red-color);
     font-weight: bold;
     line-height: 130%;
+    margin-top: 16px;
 }
 
 .search-category p{
@@ -933,11 +933,12 @@ footer{
         flex-direction: column;
     }
 
-    .shopping-guide-img-area .shopping-guide-back{
+    .first-family{
         display: none;
     }
 
-    .shopping-guide-text-area-text .shopping-guide-img-area-img-wrapper{
+
+    .mobile-family{
         display: block;
     }
     
@@ -1025,6 +1026,69 @@ footer{
     footer{
         margin: 43px 36px;
     }
+}
+
+@media screen and (max-width:630px) {
+
+    .menu-wrapper{
+        display: none;
+    }
+
+    .mobile-hmaburger{
+        width: 48px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 250;
+    }
+
+    .mobile-hamburger-wrapper{
+        display: block;
+        width: 28px;
+        height: 28px;
+        position: relative;
+    }
+
+    .mobile-hmaburger span{
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background-color: var(--main-red-color);
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.5s;
+    }
+
+      .mobile-hamburger-wrapper > span:first-child{
+        top: 0;
+        transform: none;
+    }
+    
+    .mobile-hamburger-wrapper > span:last-child{
+        top: 100%;
+        transform: translateY(-50%);
+    }
+    
+    .mobile-hmaburger.active-hamberger .mobile-menu-top{
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+        background-color: var(--main-brown-color);
+    }
+    
+    .mobile-hmaburger.active-hamberger .middle{
+        opacity: 0;
+    }
+    
+    .mobile-hmaburger.active-hamberger .mobile-menu-bottom{ 
+        background-color: var(--main-brown-color);
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+
+
 
 }
 
@@ -1112,6 +1176,10 @@ footer{
         color: var(--main-gray-color);
     }
 
+    #shopping-tip{
+        padding: 0px 16px;
+    }
+
     .shopping-guide-img-text-wrapper h3{
         font-size: 14px;
     }
@@ -1126,6 +1194,100 @@ footer{
 
     .shopping-guide-text-area span{
         font-size: 14px;
+    }
+
+    #shopping-guide{
+        margin-bottom: 156px;
+    }
+
+    .step1-text-wrapper h4{
+        font-size: 20px;
+    }
+
+    .step1-text-wrapper p{
+        line-height: 150%;
+    }
+
+    .step1-contanier{
+        display: unset;
+    }
+
+    .step1-containers{
+        margin-top: 120px;
+        gap: 62px;
+    }
+
+    .step2-text h4{
+        font-size: 20px;
+    }
+
+    .step2-main-img-container{
+        width: 281px;
+    }
+
+    .step2-slide figure{
+        width: 281px;
+    }
+
+    .search-category h4 {
+    font-size: 20px;
+    }
+
+    .category p{
+        width: 90px;
+    }
+
+    .step3-category{
+        gap: 80px;
+    }
+
+    .search-category p{
+        margin-top: 40px;
+    }
+
+    .search-here{
+        margin-top: 40px;
+    }
+
+    footer{
+        margin: unset;
+        margin-top: 64px ;
+    }
+
+    .footer-wrapper .main-container-size{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-text-warpper h1{
+        margin: 0 auto;
+        width: 78px;
+        height: 25px;
+    }
+
+    .footer-nav{
+        margin-top: 16px;
+    }
+
+    .footer-nav a{
+        font-size: 10px;
+    }
+
+    .footer-information{
+        justify-content: center;
+    }
+
+    .footer-information p{
+        font-size: 10px;
+    }
+
+    .footer-text-warpper p{
+        font-size: 10px;
+    }
+
+    .footer-wrapper .main-container-size ul{
+        justify-content: center;
+        margin-top: 16px;
     }
 
 }
