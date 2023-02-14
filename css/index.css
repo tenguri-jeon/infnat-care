@@ -31,6 +31,10 @@
     z-index: 100;
 }
 
+body{
+    padding-top: 64px;
+}
+
 header{
     position: fixed;
     top: 0;
@@ -39,6 +43,8 @@ header{
     width: 100%;
     z-index: 100;
     overflow: hidden;
+    background-color: var(--main-white-color);
+    transition: 0.4s;
 }
 
 .header-size{
@@ -132,7 +138,7 @@ header{
 
 #main{
     background-image: url(../img/main-img.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
@@ -157,7 +163,7 @@ header{
 #main .main-text{
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 60%;
 }
 
 #main .main-container-size{
@@ -209,9 +215,15 @@ header{
 }
 
 .explnae-baby-img{
-    flex-basis: 50%;
+    flex-basis: 600px;
+    height: 400px;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.explnae-baby-img img{
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -221,8 +233,7 @@ header{
 
 .explane-mobile-img{
     position: absolute;
-    width: 230px;
-    height: 460px;
+    width: 270px;
     left: 40%;
     transform: translate(-50%, 5%);
 }
@@ -243,6 +254,7 @@ header{
     padding-left: 0px;
     padding-right: 100px;
     text-align: end;
+    align-items: flex-end;
 }
 
 .heading-text{
@@ -278,18 +290,27 @@ header{
     position: absolute;
     right: -10%;
     top: -40%;
+    animation-name: square;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 .pink-square{
     position: absolute;
     left: -8%;
     top: -50%;
+    animation-name: square;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 .yellow-square{
     position: absolute;
     right: -5%;
-    top: -20%;
+    top: -40%;
+    animation-name: square;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 .sleep-baby{
@@ -323,6 +344,7 @@ header{
     width: 824px;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .allow-wrapper{
@@ -384,12 +406,12 @@ header{
 }
 
 .mobile-view-wrapper{
-    width: 380px;
+    width: 355px;
     height: 740px;
     position: absolute;
     z-index: 100;
     top: -5%;   
-    left: 10%; 
+    left: 8%; 
 }
 
 .make-mobile-phone{
@@ -397,7 +419,7 @@ header{
 }
 
 .make-mobile-view{
-    width: 360px;
+    width: 335px;
     height: 720px;
     border: 10px solid black;
     border-radius: 54px;
@@ -437,43 +459,49 @@ header{
 }
 
 .app-mobile-view-wrapper figure{
-    width: 345px;
+    width: 100%;
     height: 722px;
     overflow: hidden;
 }
 
 .before-allow-area{
     position: absolute;
+    display: flex;
     left: 0;
     top: 30%;
     width: 150px;
     height: 150px;
+    justify-content: center;
+    align-items: center;
 }
 
 .before-allow{
+    box-sizing: border-box;
+    transform: rotate(-45deg);
     border-top: 5px solid var(--main-gray-color);
     border-left: 5px solid var(--main-gray-color);
     width: 100px;
     height: 100px;
-    transform-origin: bottom center ;
-    transform: translate(65%, 0%) rotate(-45deg);
 }
 
 .next-allow{
+    box-sizing: border-box;
+    transform: rotate(45deg);
     border-top: 5px solid var(--main-gray-color);
     border-right: 5px solid var(--main-gray-color);
     width: 100px;
     height: 100px;
-    transform-origin: bottom center ;
-    transform: translate(-65%, 0%) rotate(45deg);
 }
 
 .next-allow-area{
     position: absolute;
+    display: flex;
     right: 0;
     top: 30%;
     width: 150px;
     height: 150px;
+    justify-content: center;
+    align-items: center;
 }
 
 #shopping-guide{
@@ -615,7 +643,7 @@ header{
 }
 
 .step2-text-container{
-    flex-basis: 80%;
+    flex-basis: 65%;
 }
 
 .step2-main-slide-wrapper{
@@ -628,7 +656,8 @@ header{
 }
 
 .step2-slide figure{
-    width: 389px;
+    width: 100%;
+    height: 500px;
 }
 
 
@@ -669,6 +698,7 @@ header{
 }
 
 .step3-category{
+    gap: 32px;
     margin-top: 96px;
     display: flex;
     justify-content: space-between;
@@ -817,7 +847,36 @@ footer{
     height: 25px;
 }
 
+@keyframes square {
+    0%{
+        rotate: 0deg;
+    }
+
+    100%{
+        rotate: 360deg
+        };
+
+}
+
 @media screen and (max-width: 1250px) {
+
+    .explnae-baby-img{
+        flex-basis: 30%;
+    }
+
+    .explane-mobile-img{
+        left: 30%;
+    }
+
+    .sleep-baby{
+        justify-content: flex-end;
+    }
+
+    .sleep-baby .explane-mobile-img{
+        right: 29%;
+        left: unset;
+    }
+
     .blue-square{
         display: none;
     }
@@ -828,6 +887,69 @@ footer{
     
     .yellow-square{
         display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .mobile-img-wrapper{
+        padding: 0px 32px;
+    }
+
+    .make-mobile-view{
+        width: 280px;
+        height: 590px;
+    }
+
+    .mobile-view-wrapper{
+        width: 300px;
+        height: unset;
+        top: 5%;
+        left: 7%;
+    }
+    
+    .allow-container-wrapper{
+        display: flex;
+        gap: 55px;
+        justify-content: center;
+        margin-top: 32px;
+    }
+
+    .next-allow-area{
+        position: unset;
+        background-color: #dadada;
+        border-radius: 50%;
+        top: unset;
+        width: 50px;
+        height: 50px;
+        right: 10%;
+        bottom: 25%;
+    }
+
+    .before-allow-area{
+        position: unset;
+        background-color: #dadada;
+        border-radius: 50%;
+        top: unset;
+        width: 50px;
+        height: 50px;
+        left: unset;
+        right: 35%;
+        bottom: 25%;
+    }
+
+    .next-allow{
+        border-top: 5px solid var(--main-white-color);
+        border-right: 5px solid var(--main-white-color);
+        width: 25px;
+        height: 25px;
+    }
+
+    .before-allow{
+        border-top: 5px solid var(--main-white-color);
+        border-left: 5px solid var(--main-white-color);
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -853,7 +975,7 @@ footer{
     }
 
     #explane-infant-care {
-    padding: 0px 32px;
+        padding: 0px 32px;
     }
 
     .explane-infant-care-container{
@@ -861,8 +983,21 @@ footer{
         gap: 24px;
     }
 
+    .explnae-baby-img{
+        flex-basis: unset;
+        height: 400px;
+    }
+
+    .sleep-baby .explane-mobile-img{
+        right: 0;
+    }
+
     .sleep-baby{
         flex-direction: column-reverse;
+    }
+
+    .sleep-baby .explane-infant-care-container-text{
+        align-items: start;
     }
 
     .explane-mobile-img{
@@ -886,47 +1021,8 @@ footer{
     }
 
     .mobile-view-wrapper{
-        left: 0;
-    }
-
-    .next-allow-area{
-        background-color: #dadada;
-        border-radius: 50%;
-        top: unset;
-        width: 50px;
-        height: 50px;
-        right: 10%;
-        bottom: 25%;
-    }
-
-    .before-allow-area{
-        background-color: #dadada;
-        border-radius: 50%;
-        top: unset;
-        width: 50px;
-        height: 50px;
-        left: unset;
-        right: 35%;
-        bottom: 25%;
-    }
-
-    .next-allow{
-        border-top: 5px solid var(--main-white-color);
-        border-right: 5px solid var(--main-white-color);
-        width: 25px;
-        height: 25px;
-        transform: translate(-25% , 15%) rotate(45deg);
-    }
-
-    .before-allow{
-        border-top: 5px solid var(--main-white-color);
-        border-left: 5px solid var(--main-white-color);
-        width: 25px;
-        height: 25px;
-        transform: translate(75% , 15%) rotate(-45deg);
-        bottom: 25%;
-        right: 25%;
-        left: unset;
+        top: 2%;
+        left: 1%;
     }
 
     #shopping-guide .main-container-size{
@@ -936,7 +1032,6 @@ footer{
     .first-family{
         display: none;
     }
-
 
     .mobile-family{
         display: block;
@@ -1024,7 +1119,7 @@ footer{
     }
 
     footer{
-        margin: 43px 36px;
+        padding: 43px 36px;
     }
 }
 
@@ -1140,7 +1235,6 @@ footer{
 
     .show-app {
     width: 330px;
-    height: 360px;
     }
 
     .make-mobile-view{
@@ -1167,6 +1261,8 @@ footer{
     .app-text-wrapper{
         position: unset;
         margin-top: 64px;
+        text-align: center;
+        margin-top: 130px;
     }
 
     .app-text-wrapper p{
