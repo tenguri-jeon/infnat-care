@@ -163,7 +163,8 @@ header{
 #main .main-text{
     position: absolute;
     left: 0;
-    top: 60%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #main .main-container-size{
@@ -379,7 +380,7 @@ header{
 }
 
 .app-text-wrapper p{
-    color: var(--main-white-color);
+    color: #dadada;
     font-size: 16px;
 }
 
@@ -860,6 +861,27 @@ footer{
 
 @media screen and (max-width: 1250px) {
 
+    #main{
+        padding: 0px 32p;
+    }
+
+    #explane-infant-care{
+        padding: 0px 32px;
+    }
+
+    #shopping-guide{
+        padding: 0px 32px;
+    }
+
+    #shopping-tip{
+        padding: 0px 32px;
+        margin-bottom: 96px;
+    }
+
+    footer{
+        padding: 43px 32px;
+    }
+
     .explnae-baby-img{
         flex-basis: 30%;
     }
@@ -891,10 +913,6 @@ footer{
 }
 
 @media screen and (max-width: 1000px) {
-
-    .mobile-img-wrapper{
-        padding: 0px 32px;
-    }
 
     .make-mobile-view{
         width: 280px;
@@ -965,7 +983,7 @@ footer{
 
     #main{
         background-size: cover;
-        background-position: 38%;
+        background-position: 60%;
         height: 790px;
         padding: 32px;
     }
@@ -1201,6 +1219,10 @@ footer{
         display: block;
     }
 
+    .sub-text{
+        line-height: 150%;
+    }
+
     .explane-main-text p {
         line-height: 150%;
     }
@@ -1225,8 +1247,13 @@ footer{
         margin: 0 auto;
     }
 
+    .explnae-baby-img{
+        height: 200px;
+    }
+
     .app-heading-text p{
         font-size: 24px;
+        line-height: 130%;
     }
 
     .recommended-product {
@@ -1318,6 +1345,7 @@ footer{
     }
 
     .step2-main-img-container{
+        margin-top: 64px;
         width: 281px;
     }
 
@@ -1338,7 +1366,7 @@ footer{
     }
 
     .search-category p{
-        margin-top: 40px;
+        font-size: 16px;
     }
 
     .search-here{
