@@ -28,9 +28,10 @@ function header(){
 })
 }
 
-const hamburgerMenu = document.querySelector('.mobile-hamburger-menu');
 const hamburgerA = document.querySelector('.mobile-hamburger');
+const hamburgerMenu = document.querySelector('.mobile-hamburger-menu');
 
 hamburgerA.addEventListener('click', ()=>{
-    hamburgerMenu.classList.add('click-close')
+    hamburgerMenu.classList.toggle('click-close');
+    hamburgerA.classList.toggle('active-hamburger');
 })

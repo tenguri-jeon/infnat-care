@@ -146,6 +146,7 @@ header{
 
 .mobile-hamburger{
     display: none;
+    position: relative;
 }
 
 .mobile-hamburger-menu{
@@ -420,6 +421,7 @@ header{
 
 .app-mobile-background{
     display: flex;
+    transition: 0.5s;
 }
 
 .mobile-view-wrapper{
@@ -472,6 +474,7 @@ header{
 
 .app-mobile-view-wrapper{
     display: flex;
+    transition: 0.5s;
 
 }
 
@@ -661,6 +664,10 @@ header{
     flex-basis: 35%;
 }
 
+.step2-subslide-container{
+    overflow: hidden;
+}
+
 .step2-text-container{
     flex-basis: 65%;
 }
@@ -672,6 +679,7 @@ header{
 .step2-main-img-container{
     width: 389px;
     overflow: hidden;
+    z-index: 50;
 }
 
 .step2-slide figure{
@@ -688,6 +696,7 @@ header{
 
 .step2-sub-slide-wrapper{
     display: flex;
+    transition: 0.5s;
 }
 
 .step2-text{
@@ -1165,6 +1174,10 @@ footer{
         right: 70%;
     }
 
+    .step2-subslide-container{
+        overflow: hidden;
+    }
+
     .step2-sub-slide-wrapper{
         display: none;
     }
@@ -1223,10 +1236,7 @@ footer{
         margin-bottom: 35px;
     }
 
-    .click-close{
-        left: 0%;
-    }
-
+    
     .mobile-hamburger-menu{
         display: block;
         z-index: 200;
@@ -1240,7 +1250,10 @@ footer{
         box-sizing: border-box;
         transition: 0.5s;
     }
-
+    
+    .click-close{
+        left: 0%;
+    }
     .mobile-hamburger{
         width: 48px;
         height: 48px;
@@ -1268,7 +1281,7 @@ footer{
         transition: 0.5s;
     }
 
-      .mobile-hamburger-wrapper > span:first-child{
+    .mobile-hamburger-wrapper > span:first-child{
         top: 0;
         transform: none;
     }
@@ -1278,17 +1291,17 @@ footer{
         transform: translateY(-50%);
     }
     
-    .mobile-hamburger.active-hamberger .mobile-menu-top{
+    .mobile-hamburger .active-hamburger .mobile-menu-top{
         top: 50%;
         transform: translateY(-50%) rotate(-45deg);
         background-color: var(--main-brown-color);
     }
     
-    .mobile-hamburger.active-hamberger .middle{
+    .mobile-hamburger .active-hamburger .middle{
         opacity: 0;
     }
     
-    .mobile-hamburger.active-hamberger .mobile-menu-bottom{ 
+    .mobile-hamburger .active-hamburger .mobile-menu-bottom{ 
         background-color: var(--main-brown-color);
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
