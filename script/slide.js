@@ -1,6 +1,6 @@
-makeappslide();
+makeAppSlide();
 
-function makeappslide(){
+function makeAppSlide(){
 
     const appcontent = document.querySelectorAll('.app-mobile-view-wrapper li figure');
     const contentswrapper = document.querySelector('.app-mobile-view-wrapper');
@@ -10,11 +10,11 @@ function makeappslide(){
     const imgcontentswrapper = document.querySelector('.app-mobile-background');
     const allow = document.querySelectorAll('.allow-container-wrapper a');
 
-    let index;
+    let index=0;
     let slideWith;
     let imgslideWith;
     let count = appcontent.length;
-    
+
     allow[0].addEventListener('click', (e)=>{
         e.preventDefault();
         before();
@@ -26,13 +26,13 @@ function makeappslide(){
     })
 
     window.addEventListener('resize', ()=>{
-        makeappslide();
+        makeAppSlide();
         makeimgslide();
     });
     
 
-    makeappslide();
-    function makeappslide() {
+    makeAppSlide();
+    function makeAppSlide() {
         slideWith = slideapp.clientWidth
         for (let i = 0; i < appcontent.length; i++) {
             appcontent[i].style.width = `${slideWith}px`;
@@ -49,20 +49,24 @@ function makeappslide(){
 
 
     function after(){
-        if(index > appcontent.length - count-1){
-            index = appcontent.length - count -1
-        }
         index++;
+        if(index > appcontent.length - 1){
+            index = appcontent.length - 1;
+        }
+
+        console.log(`appcontent.length: ${appcontent.length} - count: ${count}`)
+        console.log(index);
         moveappcontents();
         moveimgcontents();
     }
 
 
     function before(){
+        index--;
         if(index < 0) {
             index = 0
         }
-        index--;
+        console.log(index);
         moveappcontents();
         moveimgcontents();
     }

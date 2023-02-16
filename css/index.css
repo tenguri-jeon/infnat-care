@@ -13,6 +13,7 @@
     --container-size : 1200px
 }
 
+
 .hide-text {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
@@ -755,7 +756,8 @@ header{
 
 .search-here p {
     color: #a3a3a3;
-    font-size: 2.2rem;
+    font-size: 24px;
+    height: 40px;
 }
 
 .example-category{
@@ -1204,10 +1206,6 @@ footer{
         display: none;
     }
 
-    .click-close{
-        left: 0;
-    }
-
     .mobile-logo{
         width: 90px;
         height: 40px;
@@ -1223,6 +1221,10 @@ footer{
 
     .mobile-menu li{
         margin-bottom: 35px;
+    }
+
+    .click-close{
+        left: 0%;
     }
 
     .mobile-hamburger-menu{
@@ -1351,7 +1353,11 @@ footer{
     }
 
     .explane-main-text {
-        margin-top: 72px;
+        margin: 128px 0px;
+    }
+
+    .explane-infant-care-container {
+    margin-bottom: 256px;
     }
 
     #explane-infant-care{
@@ -1433,6 +1439,7 @@ footer{
 
     .step1-text-wrapper p{
         line-height: 150%;
+        font-size: 16px;
     }
 
     .step1-contanier{
@@ -1449,7 +1456,6 @@ footer{
     }
 
     .step2-main-img-container{
-        margin-top: 64px;
         width: 281px;
     }
 
