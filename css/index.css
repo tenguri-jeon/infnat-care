@@ -55,7 +55,6 @@ header{
 .header-size{
     max-width: 1200px;
     margin: 0 auto;
-
 }
 
 .header-wrapper{
@@ -181,7 +180,7 @@ header.modal-open .modal{
     background-position: center;
     width: 100%;
     height: 560px;
-    padding-bottom: 96px;
+    margin-bottom: 96px;
     box-sizing: border-box;
 }
 
@@ -216,7 +215,7 @@ header.modal-open .modal{
 
 .main-text h2{
     color: var(--main-red-color);
-    font-size: 40px;
+    font-size: 32px;
     font-weight: bold;
     line-height: 150%;
 }
@@ -897,6 +896,10 @@ footer{
 .sns-wrapper li{
     width: 25px;
     height: 25px;
+}
+
+.animation{
+    transform: translateX(-1000%);
 }
 
 @keyframes square {
