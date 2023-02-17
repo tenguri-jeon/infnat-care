@@ -46,7 +46,7 @@ header{
     left: 0;
     height: 64px;
     width: 100%;
-    z-index: 100;
+    z-index: 200;
     overflow: hidden;
     background-color: var(--main-white-color);
     transition: 0.4s;
@@ -55,6 +55,7 @@ header{
 .header-size{
     max-width: 1200px;
     margin: 0 auto;
+
 }
 
 .header-wrapper{
@@ -65,7 +66,6 @@ header{
     justify-content: center;
     position: relative;
     z-index: 200;
-    height: 30px;
 }
 
 .header-wrapper h1 {
@@ -122,7 +122,6 @@ header{
     gap: 6px;
     padding-top: 8px;
     height: 22px;
-    overflow: hidden;
     padding-left: 8px;
 }
 
@@ -131,17 +130,39 @@ header{
     height: 18px;
 }
 
-.language-wrapper{
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
+.modal{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: var(--main-white-color);
     text-align: center;
+    border: 1px solid black;
+    top: 0;
+    display: none;
 }
 
-.language-click{
-    height: 100px;
-    width: 100px;
-    border: 2px solid black;
+.modal-open{
+    overflow: unset;
+}
+
+header.modal-open .modal{
+    display: block;
+}
+
+.modal-body a.none {
+    text-decoration: line-through;
+    font-size: 12px;
+    font-weight: lighter;
+    cursor: default;   
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body a{
+    margin-top: 16px;
 }
 
 .mobile-hamburger{
@@ -1003,9 +1024,46 @@ footer{
         width: 25px;
         height: 25px;
     }
+
+    .example-category{
+        gap: 24px;
+    }
+
+    .step3-category{
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .search-category{
+        text-align: center;
+    }
+
+    .block2{
+        gap: 64px;
+    }
 }
 
 @media screen and (max-width: 834px) {
+
+    #main .main-container-size{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #main .main-text{
+        backdrop-filter: blur(45px);
+        padding: 35px;
+        border-radius: 16px;
+        overflow: hidden;
+        text-align: center;
+        position: unset;
+        transform: unset;
+    }
+
+    .main-text h2 {
+    font-size: 27px;
+    }
 
     .header-right{
         display: none;
@@ -1020,10 +1078,6 @@ footer{
         background-position: 60%;
         height: 790px;
         padding: 32px;
-    }
-
-    .main-text h2{
-        font-size: 30px;
     }
 
     #explane-infant-care {
@@ -1041,7 +1095,8 @@ footer{
     }
 
     .sleep-baby .explane-mobile-img{
-        right: 0;
+        transform: none;
+        right: -9%;
     }
 
     .sleep-baby{
@@ -1053,14 +1108,10 @@ footer{
     }
 
     .explane-mobile-img{
-        right: 0;
+        right: -9%;
         transform: none;
         left: unset;
         top: 20%;
-    }
-
-    .sleep-baby .explane-mobile-img{
-        transform: none;
     }
 
     .explane-infant-care-container-text{
@@ -1195,13 +1246,7 @@ footer{
         margin: 0 auto;
     }
 
-    .step3-category{
-        flex-direction: column;
-    }
 
-    .search-category{
-        text-align: center;
-    }
 
     .example-category{
         margin-top: 24px;
@@ -1214,6 +1259,11 @@ footer{
 }
 
 @media screen and (max-width:630px) {
+
+    .step1-text-wrapper p{
+        line-height: 150%;
+        font-size: 16px;
+    }
 
     .menu-wrapper{
         display: none;
@@ -1254,6 +1304,7 @@ footer{
     .click-close{
         left: 0%;
     }
+
     .mobile-hamburger{
         width: 48px;
         height: 48px;
@@ -1291,18 +1342,16 @@ footer{
         transform: translateY(-50%);
     }
     
-    .mobile-hamburger .active-hamburger .mobile-menu-top{
+    .mobile-hamburger.active-hamburger .mobile-menu-top{
         top: 50%;
         transform: translateY(-50%) rotate(-45deg);
-        background-color: var(--main-brown-color);
     }
     
-    .mobile-hamburger .active-hamburger .middle{
+    .mobile-hamburger.active-hamburger .middle{
         opacity: 0;
     }
     
-    .mobile-hamburger .active-hamburger .mobile-menu-bottom{ 
-        background-color: var(--main-brown-color);
+    .mobile-hamburger.active-hamburger .mobile-menu-bottom{ 
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
     }
@@ -1339,20 +1388,6 @@ footer{
         width: 159px;
     }
 
-
-
-}
-
-@media screen and (max-width: 360px) {
-    
-    .menu-wrapper{
-        display: none;
-    }
-
-    .main-text{
-        text-align: center;
-    }
-
     .mobile-br{
         display: block;
     }
@@ -1379,6 +1414,93 @@ footer{
 
     .explane-mobile-img{
         position: unset;
+        margin: 0 auto;
+    }
+
+    .explane-infant-care-container-text{
+        text-align: center;
+    }
+
+    .recommended-product{
+        margin: 0 auto;
+    }
+
+    .search-here p{
+        font-size: 16px;
+        height: 30px;
+    }
+
+    .category p{
+        width: 95px;
+    }
+
+    footer{
+        margin: unset;
+        margin-top: 64px ;
+    }
+
+    .footer-wrapper .main-container-size{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-text-warpper h1{
+        margin: 0 auto;
+        width: 78px;
+        height: 25px;
+    }
+
+    .footer-nav{
+        margin-top: 16px;
+    }
+
+    .footer-nav a{
+        font-size: 10px;
+    }
+
+    .footer-information{
+        justify-content: center;
+    }
+
+    .footer-information p{
+        font-size: 10px;
+    }
+
+    .footer-text-warpper p{
+        font-size: 10px;
+    }
+
+    .footer-wrapper .main-container-size ul{
+        justify-content: center;
+        margin-top: 16px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    
+    #main{
+        padding: 0px 16px;
+    }
+    
+    #main .main-text{
+        padding: 0px;
+    }
+
+    .main-text h2{
+        font-size: 20px;
+    }
+
+    .menu-wrapper{
+        display: none;
+    }
+
+    .main-text{
+        text-align: center;
+    }
+
+    .explane-infant-care-container-text{
+        text-align: start;
     }
 
     .mobile{
@@ -1450,10 +1572,6 @@ footer{
         font-size: 20px;
     }
 
-    .step1-text-wrapper p{
-        line-height: 150%;
-        font-size: 16px;
-    }
 
     .step1-contanier{
         display: unset;
@@ -1496,45 +1614,8 @@ footer{
         margin-top: 40px;
     }
 
-    footer{
-        margin: unset;
-        margin-top: 64px ;
-    }
-
-    .footer-wrapper .main-container-size{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-text-warpper h1{
-        margin: 0 auto;
-        width: 78px;
-        height: 25px;
-    }
-
-    .footer-nav{
-        margin-top: 16px;
-    }
-
-    .footer-nav a{
-        font-size: 10px;
-    }
-
-    .footer-information{
-        justify-content: center;
-    }
-
-    .footer-information p{
-        font-size: 10px;
-    }
-
-    .footer-text-warpper p{
-        font-size: 10px;
-    }
-
-    .footer-wrapper .main-container-size ul{
-        justify-content: center;
-        margin-top: 16px;
+    .search-here p {
+    height: 27px;
     }
 
 }

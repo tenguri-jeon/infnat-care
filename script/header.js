@@ -35,3 +35,17 @@ hamburgerA.addEventListener('click', ()=>{
     hamburgerMenu.classList.toggle('click-close');
     hamburgerA.classList.toggle('active-hamburger');
 })
+
+
+const clickModal = document.querySelector('.click-language');
+const modal = document.querySelector('.modal');
+const modalHeader = document.querySelector('header');
+const body = document.querySelector('body');
+
+clickModal.addEventListener('click', (e)=>{
+    modalHeader.classList.add('modal-open');
+    // body.style.overflow = 'hidden';
+})
+
+
+
