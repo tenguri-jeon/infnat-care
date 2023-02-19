@@ -329,7 +329,7 @@ header.modal-open .modal{
     right: -10%;
     top: -40%;
     animation-name: square;
-    animation-duration: 10s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
 }
 
@@ -338,7 +338,7 @@ header.modal-open .modal{
     left: -8%;
     top: -50%;
     animation-name: square;
-    animation-duration: 10s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
 }
 
@@ -347,7 +347,7 @@ header.modal-open .modal{
     right: -5%;
     top: -40%;
     animation-name: square;
-    animation-duration: 10s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
 }
 
@@ -1263,6 +1263,19 @@ footer{
 
 @media screen and (max-width:630px) {
 
+    .sleep-baby .explane-infant-care-container-text{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .sub-text{
+        margin: 0 auto;
+    }
+
+    .heading-text{
+        margin: 0 auto;
+    }
+
     .step1-text-wrapper p{
         line-height: 150%;
         font-size: 16px;
@@ -1508,6 +1521,10 @@ footer{
 
     .mobile{
         display: none;
+    }
+
+    .sub-text{
+        margin: unset;
     }
 
     .explane-mobile-img{
