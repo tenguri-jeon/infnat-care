@@ -42,7 +42,7 @@ const modal = document.querySelector('.modal');
 const modalHeader = document.querySelector('header');
 const body = document.querySelector('body');
 
-
+modalOpenClose();
 function modalOpenClose() {
     
     clickModal.addEventListener('click', (e)=>{
@@ -56,14 +56,15 @@ function modalOpenClose() {
     })  
 }
 
-// window.addEventListener('click', (e)=>{
-//     let modalX = e.clientX;
-//     console.log(modalX);
-// })
 
-// window.addEventListener('resize', (e)=>{
-//     let modaltarget = target.document.modal;
-// })
+let modalLeft = clickModal.getBoundingClientRect().left
+let modaltop = clickModal.getBoundingClientRect().top
+
+window.addEventListener('resize' , ()=>{
+    modal.style.left = `${modalLeft}px`
+    modal.style.top = `${modaltop}px`
+})
+
 
 
 

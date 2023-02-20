@@ -698,6 +698,7 @@ header.modal-open .modal-overay{
 .step2-subslide-container{
     overflow: hidden;
     width: 700px;
+    margin: 32px auto;
 }
 
 .step2-sub-slide figure{
@@ -989,6 +990,10 @@ footer{
 
     .shopping-guide-text-area p{
         font-size: 28px;
+    }
+
+    .step2-subslide-container{
+        width: 500px;
     }
 }
 
