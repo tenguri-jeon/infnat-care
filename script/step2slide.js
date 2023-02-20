@@ -34,6 +34,8 @@ function step2(){
     function checkCircleWidth() {
         const secondClone = step2Circle[1].cloneNode(true);
         const lastClone = step2Circle[2].cloneNode(true);
+        console.log(lastClone);
+        console.log(secondClone);
 
         circleWrapper.insertBefore(secondClone,circleWrapper.null)
         circleWrapper.insertBefore(lastClone,circleWrapper.null)
@@ -41,15 +43,16 @@ function step2(){
         for (let i = 0; i < step2Circle.length; i++) {
             step2Circle[i].style.width = `${makecircleSlide}px`
         }
+        
     }
-
     function slideWidth() {
         contentswrapper.style.transform = `translateX(-${index * slideWith}px)`;
     }
-
+    
     function moveCircle(){
         circleWidth = step2Circle[0].clientWidth;
         circleWrapper.style.transform = `translateX(-${index * circleWidth}px)`;
+        console.log(index);
     }
 
 
