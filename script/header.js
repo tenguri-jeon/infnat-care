@@ -42,10 +42,34 @@ const modal = document.querySelector('.modal');
 const modalHeader = document.querySelector('header');
 const body = document.querySelector('body');
 
-clickModal.addEventListener('click', (e)=>{
-    modalHeader.classList.add('modal-open');
-    // body.style.overflow = 'hidden';
-})
+
+function modalOpenClose() {
+    
+    clickModal.addEventListener('click', (e)=>{
+        modalHeader.classList.add('modal-open');
+    })
+    
+    window.addEventListener('click',(e)=>{
+        if(e.target.classList.contains('modal-overay')){
+            modalHeader.classList.remove('modal-open');
+        }
+    })  
+}
+
+// window.addEventListener('click', (e)=>{
+//     let modalX = e.clientX;
+//     console.log(modalX);
+// })
+
+// window.addEventListener('resize', (e)=>{
+//     let modaltarget = target.document.modal;
+// })
+
+
+
+
+
+
 
 
 

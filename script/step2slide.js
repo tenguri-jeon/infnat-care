@@ -2,18 +2,18 @@
 step2();
 
 function step2(){
-
+    
     
     const content = document.querySelectorAll('.step2-slide figure');
     const contentswrapper = document.querySelector('.step2-main-slide-wrapper');
-    const contaienrWith = document.querySelector('.step2-main-img-container');
-    const step2Circle = document.querySelectorAll('.step2-sub-slide figure');
     const circleWrapper = document.querySelector('.step2-sub-slide-wrapper');
+    const contaienrWith = document.querySelector('.step2-main-img-container');
+    const step2Circle = document.querySelectorAll('.step2-sub-slide');
     const circlesize = (document.querySelector('.step2-subslide-container')).clientWidth;
     const count = 3;
     
     let circleWidth;
-    let slideWith;
+    let slideWith=123;
     let index = 0;
     
     
@@ -32,14 +32,17 @@ function step2(){
 
     checkCircleWidth();
     function checkCircleWidth() {
-        const secondClone = step2Circle[1].cloneNode(true);
-        const lastClone = step2Circle[2].cloneNode(true);
-        console.log(lastClone);
-        console.log(secondClone);
+        let makecircleSlide = ((circlesize - (24 * (count-1))) / count);
 
-        circleWrapper.insertBefore(secondClone,circleWrapper.null)
-        circleWrapper.insertBefore(lastClone,circleWrapper.null)
-        makecircleSlide = circlesize / count;
+
+        for (let i = 0; i < step2Circle.length; i++) {
+            const makeClone = step2Circle[i].cloneNode(true);
+            makeClone.style.width = `${makecircleSlide}px`
+            circleWrapper.appendChild(makeClone);
+        }
+
+       
+        
         for (let i = 0; i < step2Circle.length; i++) {
             step2Circle[i].style.width = `${makecircleSlide}px`
         }
@@ -51,22 +54,32 @@ function step2(){
     
     function moveCircle(){
         circleWidth = step2Circle[0].clientWidth;
-        circleWrapper.style.transform = `translateX(-${index * circleWidth}px)`;
+        circleWrapper.style.transform = `translateX(-${index  * (circleWidth+24)}px)`;
         console.log(index);
+    }
+
+    function nextSlide(){
+        index++;
+        circleWrapper.style.transition = `500ms`; 
+        
+        slideWidth();
+        moveCircle();
+                
+
+        if (index === content.length ) {
+            setTimeout(() => {
+                circleWrapper.style.transition = `0ms`;
+                index = 0;
+                slideWidth();
+                moveCircle();
+            }, 500);
+        }
     }
 
 
 
-
     setInterval(()=>{
-        for (let i = 0; i < content.length; i++) {
-            slideWidth();
-            moveCircle();
-        }
-        index++;
-        if (index > content.length - 1) {
-            index = 0;
-        }
+        nextSlide();
     },5000)
 
 
