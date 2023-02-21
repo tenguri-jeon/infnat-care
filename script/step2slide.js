@@ -13,7 +13,7 @@ function step2(){
     const count = 3;
     
     let circleWidth;
-    let slideWith=123;
+    let slideWith;
     let index = 0;
     
     
@@ -21,38 +21,41 @@ function step2(){
     size();
     function size() {
         window.addEventListener('resize' , ()=>{
-
+            slideWith = contentswrapper.clientWidth;
+            let makecircleSlide = ((circlesize - (24 * (count-1))) / count);
+            
             for (let i = 0; i < content.length; i++) {
-                slideWith = contentswrapper.clientWidth;
                 content[i].style.width = `${slideWith}px`
             }
-
-            let makecircleSlide = ((circlesize - (24 * (count-1))) / count);
+            
             
             for (let i = 0; i < step2Circle.length; i++) {
                 step2Circle[i].style.width = `${makecircleSlide}px`
             }
             
+            nodeWidth();
             
         })
+    }
+    
+    function nodeWidth(){
+        makeNode();
+        contentsNode.style.width = `${slideWith}px`
+        makeClone.style.width = `${makecircleSlide}px` 
     }
 
     makeNode();
     function makeNode(){
+        const contentsNode = content[0].cloneNode(true);
+        contentswrapper.appendChild(contentsNode);
+
         let makecircleSlide = ((circlesize - (24 * (count-1))) / count);
         for (let i = 0; i < step2Circle.length; i++) {
             const makeClone = step2Circle[i].cloneNode(true);
-            makeClone.style.width = `${makecircleSlide}px`
             circleWrapper.appendChild(makeClone);
         }
-
-        const contentsNode = content[0].cloneNode(true);
-        contentswrapper.appendChild(contentsNode);
-        for (let i = 0; i < contentsNode.length; i++) {
-            slideWith = contentswrapper.clientWidth;
-            contentsNode.style.width = `${slideWith}px`
-        }
     }
+
 
 
     function slideWidth() {

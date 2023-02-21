@@ -725,6 +725,9 @@ header.modal-open .modal-overay{
     height: 100%;
 }
 
+li.step2-slide{
+    flex-shrink: 0;
+}
 
 .step2-text-container{
     display: flex;
