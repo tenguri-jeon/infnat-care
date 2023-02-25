@@ -15,6 +15,29 @@ function makeAppSlide(){
     let imgslideWith;
     let count = appcontent.length;
 
+    
+    window.addEventListener('resize', ()=>{
+        makeAppSlide();
+        makeimgslide();
+    });
+    
+    
+    makeAppSlide();
+    function makeAppSlide() {
+        slideWith = slideapp.clientWidth
+        for (let i = 0; i < appcontent.length; i++) {
+            appcontent[i].style.width = `${slideWith}px`;
+        }
+    }
+    
+    makeimgslide();
+    function makeimgslide() {
+        imgslideWith = imgslide.clientWidth
+        for (let i = 0; i < imgcontent.length; i++) {
+            imgcontent[i].style.width = `${imgslideWith}px`
+        }
+    }
+    
     allow[0].addEventListener('click', (e)=>{
         e.preventDefault();
         before();
@@ -24,29 +47,6 @@ function makeAppSlide(){
         e.preventDefault();
         after();
     })
-
-    window.addEventListener('resize', ()=>{
-        makeAppSlide();
-        makeimgslide();
-    });
-    
-
-    makeAppSlide();
-    function makeAppSlide() {
-        slideWith = slideapp.clientWidth
-        for (let i = 0; i < appcontent.length; i++) {
-            appcontent[i].style.width = `${slideWith}px`;
-        }
-    }
-
-    makeimgslide();
-    function makeimgslide() {
-        imgslideWith = imgslide.clientWidth
-        for (let i = 0; i < imgcontent.length; i++) {
-             imgcontent[i].style.width = `${imgslideWith}px`
-        }
-    }
-
 
     function after(){
         index++;
