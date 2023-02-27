@@ -58,7 +58,7 @@ hamburgerA.addEventListener('click', ()=>{
     }
     
     
-    
+    modalplace();
     window.addEventListener('resize', ()=>{
         modalplace();
     })
