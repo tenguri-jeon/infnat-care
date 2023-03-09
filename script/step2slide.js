@@ -36,7 +36,6 @@ function step2(){
             for (let i = 0; i < step2Circle.length; i++) {
                 step2Circle[i].style.width = `${makecircleSlide}px`
             }
-            console.log(makecircleSlide)
         }
     
     
